@@ -1,0 +1,86 @@
+<html>
+<style>
+__regexoperators___/*去掉自带的小三角*/
+details summary::-webkit-details-marker {
+  display: none;
+}
+div
+{
+	padding: 10px;
+}
+__regexoperators___/*自定义图标，可用图片或字符,如果使用图片，请把content的值设置成空字符*/
+__regexoperators___/*展开*/
+.menu summary:before {
+     content: "+";
+     __regexoperators___/*background: url(../Images/right.png) no-repeat center center;*/ /*收起时的图片*/
+     __regexoperators___/*vertical-align: middle;*/
+}
+
+__regexoperators___/*收起*/
+.menu[open] summary:before {
+    content: "-";
+    __regexoperators___/*background: url(../Images/down.png) no-repeat center center;*/ /*展开时的图片*/
+}
+
+.menu summary {
+    height: 35px;
+	width:150px;
+    line-height: 40px;
+    text-indent: 10px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-top: 1px solid #ddd;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #CCCCCC));
+    cursor: pointer;
+}
+
+
+.menu ul li a {
+    display: block;
+    color: #666;
+}
+a {
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+Inherited from li
+.menu ul li {
+    list-style: none;
+    text-indent: 25px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+</style>
+
+<div>
+<details class="menu" open>
+      <summary>menu1</summary>
+      <ul>
+          <li><a href="http://www.sina.com.cn">submenu1</a></li>
+          <li><a href="http://www.baidu.com">submenu2</a></li>
+      </ul>
+</details>
+
+
+<details class="menu" open>
+      <summary>menu2</summary>
+      <ul>
+          <li><a href="#">submenu1</a></li>
+          <li><a href="#">submenu2</a></li>
+      </ul>
+</details>
+</div>
+</html>
